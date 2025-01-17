@@ -38,6 +38,8 @@ public:
     void mavResult(const uint16_t command, MAV_RESULT result, MAV_COMPONENT compId);
     void on_logSent(const QString& message, const quint8& severity);
 
+    void provideParametersToParameterServer();
+
 private:
     std::shared_ptr<mavsdk::Mavsdk> mMavsdk;
     std::shared_ptr<mavsdk::TelemetryServer> mTelemetryServer;
